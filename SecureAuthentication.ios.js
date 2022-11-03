@@ -1,20 +1,21 @@
 /**
  * Mostly a copy of https://github.com/naoufal/react-native-touch-id
- * @providesModule LocalAuth
+ * @providesModule SecureAuthentication
  * @flow
  */
 'use strict'
 
 import { NativeModules } from 'react-native'
-import { createError } from './error'
 import PasscodeStatus from 'react-native-passcode-status'
+import { createError } from './error'
 
-let NativeLocalAuth = NativeModules.RNLocalAuth
-let LocalAuth = {
+let NativeSecureAuthentication = NativeModules.RNSecureAuthentication
+let SecureAuthentication = {
   hasTouchID() {
-    return new Promise(function(resolve, reject) {
-      NativeLocalAuth.hasTouchID(function(error) {
+    return new Promise(function (resolve, reject) {
+      NativeSecureAuthentication.hasTouchID(function (error) {
         if (error) {
+          console.log("errora", error);
           return reject(createError(error.message))
         }
 
@@ -39,8 +40,15 @@ let LocalAuth = {
   },
 
   authenticate(opts) {
-    return new Promise(function(resolve, reject) {
-      NativeLocalAuth.authenticate(
+    const DEFAULT_OPTIONS = {
+      reason: 'This is a secure area, please authenticate yourself',
+      description: '',
+      fallbackToPasscode: true,
+      suppressEnterPassword: false,
+    }
+    opts = { ...DEFAULT_OPTIONS, ...(opts || {}) }
+    return new Promise(function (resolve, reject) {
+      NativeSecureAuthentication.authenticate(
         opts.reason || '',
         !!opts.fallbackToPasscode,
         !!opts.suppressEnterPassword,
@@ -53,4 +61,4 @@ let LocalAuth = {
   }
 }
 
-module.exports = LocalAuth
+module.exports = SecureAuthentication

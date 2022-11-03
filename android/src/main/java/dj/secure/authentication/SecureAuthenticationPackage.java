@@ -1,5 +1,5 @@
 
-package io.tradle.reactlocalauth;
+package dj.secure.authentication;;
 
 import java.util.Arrays;
 import java.util.Collections;
@@ -11,10 +11,10 @@ import com.facebook.react.bridge.ReactApplicationContext;
 import com.facebook.react.uimanager.ViewManager;
 import com.facebook.react.bridge.JavaScriptModule;
 
-public class LocalAuthPackage implements ReactPackage {
+public class SecureAuthenticationPackage implements ReactPackage {
     @Override
     public List<NativeModule> createNativeModules(ReactApplicationContext reactContext) {
-      return Arrays.<NativeModule>asList(new LocalAuthModule(reactContext));
+      return Arrays.<NativeModule>asList(new SecureAuthenticationModule(reactContext));
     }
 
     @Override

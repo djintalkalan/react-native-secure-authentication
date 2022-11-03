@@ -2,6 +2,6 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "self:/Users/tenaciousmv/Code/react-native-touch-id/RNLocalAuth.xcodeproj">
+      location = "self:/Users/tenaciousmv/Code/react-native-touch-id/RNSecureAuthentication.xcodeproj">
    </FileRef>
 </Workspace>

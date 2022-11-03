@@ -1,8 +1,8 @@
-#import "RNLocalAuth.h"
+#import "RNSecureAuthentication.h"
 #import "RCTUtils.h"
 #import <LocalAuthentication/LocalAuthentication.h>
 
-@implementation RNLocalAuth
+@implementation RNSecureAuthentication
 
 RCT_EXPORT_MODULE();
 

@@ -1,5 +1,5 @@
 
-package io.tradle.reactlocalauth;
+package dj.secure.authentication;
 
 import android.app.Activity;
 import android.app.KeyguardManager;
@@ -17,7 +17,7 @@ import com.facebook.react.bridge.ReadableMap;
 // source for main part from:
 // https://github.com/googlesamples/android-ConfirmCredential/blob/master/Application/src/main/java/com/example/android/confirmcredential/MainActivity.java
 
-public class LocalAuthModule extends ReactContextBaseJavaModule {
+public class SecureAuthenticationModule extends ReactContextBaseJavaModule {
 
   private static final int AUTH_REQUEST = 18864;
   private static final String E_ACTIVITY_DOES_NOT_EXIST = "E_ACTIVITY_DOES_NOT_EXIST";
@@ -44,7 +44,7 @@ public class LocalAuthModule extends ReactContextBaseJavaModule {
     }
   };
 
-  public LocalAuthModule(ReactApplicationContext reactContext) {
+  public SecureAuthenticationModule(ReactApplicationContext reactContext) {
     super(reactContext);
     this.reactContext = reactContext;
     reactContext.addActivityEventListener(mActivityEventListener);
@@ -53,7 +53,7 @@ public class LocalAuthModule extends ReactContextBaseJavaModule {
 
   @Override
   public String getName() {
-    return "RNLocalAuth";
+    return "RNSecureAuthentication";
   }
 
   @ReactMethod

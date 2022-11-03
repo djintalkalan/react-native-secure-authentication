@@ -1,20 +1,23 @@
 {
-  "name": "react-native-local-auth",
-  "version": "1.6.0",
+  "name": "react-native-secure-authentication",
+  "version": "0.1.0",
   "description": "React Native local authentication with touch id or passcode",
   "scripts": {
-    "test": "Echo \"no tests\" && exit 1"
+    "test": "echo 'Print: no test specified'"
   },
   "main": "index.js",
+  "types": "index.d.ts",
   "repository": {
     "type": "git",
-    "url": "https://github.com/tradle/react-native-local-auth.git"
+    "url": "https://github.com/djintalkalan/react-native-secure-authentication.git"
   },
   "keywords": [
     "react-native",
     "react",
     "native",
     "touch-id",
+    "local",
+    "local-auth",
     "passcode",
     "react-component",
     "react-native-component",
@@ -23,12 +26,12 @@
     "authenticate",
     "mobile"
   ],
-  "author": "Mark Vayngrib <mark@tradle.io> (https://github.com/mvayngrib)",
+  "author": "Deepak Jaglan <djintalkalan.dj@gmail.com> (https://github.com/djintalkalan)",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/tradle/react-native-local-auth/issues"
+    "url": "https://github.com/djintalkalan/react-native-secure-authentication/issues"
   },
-  "homepage": "https://github.com/tradle/react-native-local-auth",
+  "homepage": "https://github.com/djintalkalan/react-native-secure-authentication",
   "peerDependencies": {
     "react-native-passcode-status": ">=1.1.0"
   }

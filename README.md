@@ -1,6 +1,6 @@
 # react-native-secure-authentication
 
-As of now react-native-local-auth is not maintained and not working properly. So I forked the project and created this library which support authenticate users with Touch ID, with optional fallback to passcode (if TouchID is unavailable or not enrolled). Most of the code and documentation is originally from [react-native-local-auth](https://github.com/tradle/react-native-local-auth).
+As of now react-native-local-auth is not maintained and not working properly. So I forked the project and created this library which supports authenticating users with Touch ID, with optional fallback to passcode (if TouchID is unavailable or not enrolled). Most of the code and documentation are originally from [react-native-local-auth](https://github.com/tradle/react-native-local-auth).
 
 ## Why use this library
 1. Maintained Library
